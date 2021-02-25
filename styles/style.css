@@ -11,7 +11,7 @@
   --nc-tx-2: #ffffff;
   --nc-bg-1: #112a39;
   --nc-bg-2: #1c3a4d;
-  --nc-bg-3: #e5e7eb;
+  --nc-bg-3: #ffffff17;
   --nc-lk-1: #0070f3;
   --nc-lk-2: #0366d6;
   --nc-lk-tx: #ffffff;
@@ -157,7 +157,7 @@ blockquote {
   padding: 1.5rem;
   background: var(--nc-bg-2);
   border-left: 5px solid var(--nc-bg-3);
-  border-radius: 0 0 10px;
+  border-radius: 0 10px 10px 0;
 }
 
 abbr {
@@ -171,8 +171,10 @@ blockquote *:last-child {
 
 header {
   background: var(--nc-bg-2);
-  border-bottom: 1px solid var(--nc-bg-3);
+  box-shadow: 20px 20px 60px #00000012, -20px -20px 60px #00000080;
   padding: 2rem 1.5rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 
   /* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
 
@@ -269,6 +271,7 @@ pre {
   border-radius: 4px;
   padding: 3px 6px;
   font-size: 0.9rem;
+  box-shadow: 20px 20px 60px #00000012, -20px -20px 60px #00000021;
 }
 
 kbd {
@@ -363,6 +366,7 @@ table {
   /* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
   border-collapse: collapse;
   width: 100%;
+  box-shadow: 20px 20px 60px #00000012, -20px -20px 60px #00000021;
 }
 
 td,
@@ -435,4 +439,21 @@ details,
 pre,
 blockquote {
   font-family: monospace;
+}
+
+/* Custom Scrollbar */
+
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+}
+
+/* Images */
+img {
+  border-radius: 5px;
+  box-shadow: 20px 20px 60px #00000012, -20px -20px 60px #00000021;
 }
